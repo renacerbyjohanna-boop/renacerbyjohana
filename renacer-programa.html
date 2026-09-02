@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex">
+<title>Agenda tu consulta — Más Vida, Menos Pastillas</title>
+<meta name="description" content="Agenda tu sesión estratégica gratuita con Johanna y descubre si el programa Más Vida, Menos Pastillas es para ti.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400&family=Playfair+Display:ital,wght@1,700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --lila:#F8F6FD; --morado:#463376; --morado-suave:#9B8BC4;
+  --verde:#609354; --verde-claro:#B4CFAD; --verde-medio:#7CAE71; --tinta:#2E2444;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{-webkit-text-size-adjust:100%}
+body{
+  font-family:'Figtree',system-ui,-apple-system,sans-serif;
+  background:var(--lila);color:var(--tinta);
+  line-height:1.55;font-size:17px;overflow-x:hidden;
+}
+img{max-width:100%;height:auto;display:block}
+a{text-decoration:none}
+.w{max-width:1000px;margin:0 auto;padding:0 24px}
+.s{padding:60px 0}
+
+/* hero */
+.hero{padding:52px 0 40px;text-align:center}
+.hero .sello{width:120px;height:120px;margin:0 auto 26px}
+.hero .sello svg{width:100%;height:100%;display:block}
+.hero .anillo{animation:girar 22s linear infinite;transform-origin:50% 50%}
+@keyframes girar{to{transform:rotate(360deg)}}
+@media (prefers-reduced-motion:reduce){.anillo{animation:none}}
+.hero .eyebrow{font-weight:800;color:var(--verde);font-size:1rem;margin-bottom:10px}
+h1{
+  font-weight:900;font-size:clamp(2.2rem,5.6vw,3.9rem);line-height:1;
+  letter-spacing:-.026em;color:var(--morado);margin-bottom:18px;
+}
+h1 i{font-family:'Playfair Display',Georgia,serif;font-style:italic;font-weight:700;display:block;color:var(--verde)}
+.hero p{max-width:56ch;margin:0 auto;color:#4A3E63;font-size:1.08rem}
+
+/* método */
+.metodo{background:#fff;border-radius:32px;padding:52px 48px}
+.metodo h2{
+  font-weight:900;font-size:clamp(1.7rem,3.8vw,2.5rem);line-height:1.05;
+  letter-spacing:-.02em;color:var(--morado);margin-bottom:18px;
+}
+.metodo p{color:#4A3E63;margin-bottom:16px;max-width:62ch}
+.metodo p:last-child{margin-bottom:0}
+
+.logros{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:34px}
+.logro{border-radius:22px;padding:26px 24px}
+.logro:nth-child(1){background:var(--verde-claro);color:#26401F}
+.logro:nth-child(2){background:var(--morado-suave);color:#241A3F}
+.logro:nth-child(3){background:var(--verde-claro);color:#26401F}
+.logro h3{font-weight:900;font-size:1.1rem;margin-bottom:8px;line-height:1.2}
+.logro p{font-size:.97rem;margin:0;max-width:none}
+
+/* incluye */
+.incluye{background:var(--morado);border-radius:32px;padding:52px 48px;color:#fff}
+.incluye h2{font-weight:900;font-size:clamp(1.7rem,3.8vw,2.4rem);letter-spacing:-.02em;margin-bottom:26px}
+.incluye ul{list-style:none;display:flex;flex-direction:column;gap:16px}
+.incluye li{position:relative;padding-left:34px;font-size:1.06rem;color:#EDE7FA;line-height:1.45}
+.incluye li::before{
+  content:"";position:absolute;left:0;top:.4em;width:16px;height:16px;
+  border-radius:50%;background:var(--verde-medio);
+}
+
+/* filtro */
+.filtro{background:#fff;border-radius:32px;padding:52px 48px}
+.filtro h2{
+  font-weight:900;font-size:clamp(1.7rem,3.8vw,2.4rem);line-height:1.05;
+  letter-spacing:-.02em;color:var(--morado);margin-bottom:12px;
+}
+.filtro .intro{color:#4A3E63;margin-bottom:32px;max-width:60ch}
+.p{border:0;margin-bottom:26px;padding-bottom:26px;border-bottom:1px solid #EFEAF9}
+.p:last-of-type{border-bottom:0}
+.p legend{font-weight:800;color:var(--morado);font-size:1.04rem;margin-bottom:14px;display:block;line-height:1.35}
+.ops{display:flex;flex-direction:column;gap:9px}
+.op{
+  display:flex;align-items:flex-start;gap:12px;padding:14px 18px;
+  background:var(--lila);border:2px solid #E3DDF2;border-radius:14px;
+  cursor:pointer;transition:border-color .15s ease,background .15s ease;
+}
+.op:hover{border-color:var(--morado-suave)}
+.op input{margin-top:.28em;accent-color:var(--morado);width:18px;height:18px;flex:0 0 18px;cursor:pointer}
+.op input:focus-visible{outline:3px solid var(--verde-medio);outline-offset:2px}
+.op span{font-size:1rem;color:#3D3358;line-height:1.4}
+.op:has(input:checked){border-color:var(--morado);background:#F3EFFB}
+
+.btn{
+  display:flex;align-items:center;justify-content:center;gap:10px;width:100%;
+  padding:20px 28px;font-family:inherit;font-size:1.02rem;font-weight:800;
+  letter-spacing:.1em;text-transform:uppercase;color:#fff;background:var(--morado);
+  border:none;border-radius:999px;cursor:pointer;margin-top:8px;
+  transition:background .18s ease,transform .12s ease;
+}
+.btn:hover{background:#372459}
+.btn:active{transform:translateY(1px)}
+.btn:focus-visible{outline:3px solid var(--verde);outline-offset:3px}
+.aviso-filtro{margin-top:14px;font-size:.85rem;color:#7B7192;line-height:1.5}
+.error{margin-top:14px;font-size:.94rem;font-weight:700;color:#B4453C;display:none}
+
+/* resultados */
+.oculto{display:none}
+.resultado{border-radius:32px;padding:52px 48px}
+.resultado.si{background:#fff}
+.resultado.no{background:#fff;border:3px solid var(--verde-claro)}
+.resultado h2{
+  font-weight:900;font-size:clamp(1.6rem,3.6vw,2.3rem);line-height:1.08;
+  letter-spacing:-.02em;color:var(--morado);margin-bottom:14px;
+}
+.resultado p{color:#4A3E63;margin-bottom:16px;max-width:62ch}
+.resultado .wa{
+  display:inline-flex;align-items:center;gap:12px;margin-top:12px;
+  padding:18px 32px;font-size:1rem;font-weight:800;letter-spacing:.08em;
+  text-transform:uppercase;color:#fff;background:#25A55B;border-radius:999px;
+}
+.resultado .wa:hover{background:#1E8A4B}
+.resultado .wa svg{width:22px;height:22px;fill:currentColor;flex:0 0 22px}
+#calendly{margin-top:28px;min-height:700px}
+
+/* pie */
+.pie{background:linear-gradient(100deg,#EFEBF8 0%,var(--morado) 22%,#3A2A63 78%,#EFEBF8 100%);padding:52px 0 38px;text-align:center;color:#fff}
+.pie img{width:74px;margin:0 auto 20px}
+.pie .sitio{margin-bottom:14px}
+.pie .sitio a{
+  display:inline-block;padding:11px 26px;border:2px solid rgba(255,255,255,.55);
+  border-radius:999px;color:#fff;font-weight:800;font-size:.92rem;letter-spacing:.06em;
+}
+.pie .sitio a:hover{background:rgba(255,255,255,.14)}
+.pie .redes{font-size:.98rem;line-height:1.7;color:#E4DCF4}
+.pie .redes a{color:#fff;border-bottom:1px solid rgba(255,255,255,.35)}
+.pie .legal{margin-top:24px;font-size:.78rem;color:rgba(255,255,255,.62);line-height:1.65;max-width:70ch;margin-left:auto;margin-right:auto}
+
+@media (max-width:820px){
+  .s{padding:40px 0}
+  .w{padding:0 18px}
+  .metodo,.incluye,.filtro,.resultado{padding:34px 24px}
+  .logros{grid-template-columns:1fr}
+  .hero .sello{width:96px;height:96px}
+  .resultado .wa{width:100%;justify-content:center;padding:18px 20px;font-size:.9rem}
+}
+@media (max-width:600px){body{font-size:16px}}
+</style>
+</head>
+<body>
+
+<div class="hero">
+  <div class="w">
+    <div class="sello" aria-hidden="true">
+      <svg viewBox="0 0 200 200">
+        <defs><path id="circ" d="M100,100 m-72,0 a72,72 0 1,1 144,0 a72,72 0 1,1 -144,0"/></defs>
+        <g class="anillo">
+          <text font-family="Figtree, sans-serif" font-size="18.5" font-weight="800" fill="#463376" letter-spacing="4.6">
+            <textPath href="#circ" startOffset="1%">MÉTODO RENACER</textPath>
+          </text>
+        </g>
+        <g fill="#609354" transform="translate(100,100)">
+          <g id="pet"><ellipse cx="0" cy="-26" rx="8.5" ry="20"/></g>
+          <use href="#pet" transform="rotate(45)"/><use href="#pet" transform="rotate(90)"/>
+          <use href="#pet" transform="rotate(135)"/><use href="#pet" transform="rotate(180)"/>
+          <use href="#pet" transform="rotate(225)"/><use href="#pet" transform="rotate(270)"/>
+          <use href="#pet" transform="rotate(315)"/>
+        </g>
+      </svg>
+    </div>
+    <p class="eyebrow">Programa de 12 semanas · Cohorte #1</p>
+    <h1>Más vida, menos pastillas <i>empieza con una conversación</i></h1>
+    <p>Antes de entrar al programa tenemos una sesión de 30 minutos, solo tú y yo. Ahí reviso tu caso y te digo con honestidad si esto es para ti. No todas las mujeres califican, y prefiero decírtelo de frente antes que aceptarte en un programa que no va a darte lo que necesitas.</p>
+  </div>
+</div>
+
+<div class="s">
+  <div class="w">
+    <div class="metodo">
+      <h2>Qué es Más Vida, Menos Pastillas</h2>
+      <p>Un programa integral de 12 semanas con acompañamiento grupal y asesoramiento en salud y nutrición, para mujeres de 35 años en adelante que quieren reducir la inflamación crónica, recuperar su energía y disminuir progresivamente la dependencia de medicamentos.</p>
+      <p>El Método Renacer trabaja la causa raíz de la inflamación integrando alimentación antiinflamatoria, regulación del estrés, descanso profundo y acompañamiento médico responsable. Aquí no se pone a dieta a nadie, no se exigen rutinas imposibles y no se suspende ningún medicamento por cuenta propia.</p>
+
+      <div class="logros">
+        <div class="logro">
+          <h3>Energía estable</h3>
+          <p>No la del café de las 8 que se cae a las 11. Energía que dura el día.</p>
+        </div>
+        <div class="logro">
+          <h3>Menos hinchazón</h3>
+          <p>Cuando la inflamación baja desde la raíz, el cuerpo responde rápido.</p>
+        </div>
+        <div class="logro">
+          <h3>Conversación con tu médico</h3>
+          <p>Llegas a tu consulta con resultados en mano y argumentos reales.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="s">
+  <div class="w">
+    <div class="incluye">
+      <h2>Qué incluye</h2>
+      <ul>
+        <li>Mentoría 1:1 inicial para conocer tu salud, revisar tus exámenes y diseñar tu punto de partida</li>
+        <li>12 mentorías grupales en vivo para aprender, practicar y resolver dudas</li>
+        <li>Acceso a Johanna por WhatsApp de lunes a viernes durante todo el programa</li>
+        <li>Comunidad privada de mujeres en el mismo proceso</li>
+        <li>Tu Protocolo Personal de Salud, tuyo para siempre y ajustable cuando la vida se complique</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<!-- ==================== FILTRO ==================== -->
+<div class="s" id="paso-filtro">
+  <div class="w">
+    <div class="filtro">
+      <h2>Antes de agendar, cuéntame de ti</h2>
+      <p class="intro">Seis preguntas rápidas. Sirven para saber si el programa es apropiado para tu situación y para que la consulta sea aprovechada al máximo.</p>
+
+      <form id="formFiltro" novalidate>
+
+        <fieldset class="p">
+          <legend>1. ¿Cuál es tu edad?</legend>
+          <div class="ops">
+            <label class="op"><input type="radio" name="edad" value="menor"><span>Menos de 30 años</span></label>
+            <label class="op"><input type="radio" name="edad" value="30-34"><span>Entre 30 y 34 años</span></label>
+            <label class="op"><input type="radio" name="edad" value="35-49"><span>Entre 35 y 49 años</span></label>
+            <label class="op"><input type="radio" name="edad" value="50+"><span>50 años o más</span></label>
+          </div>
+        </fieldset>
+
+        <fieldset class="p">
+          <legend>2. ¿Estás bajo el control de un médico en este momento?</legend>
+          <div class="ops">
+            <label class="op"><input type="radio" name="medico" value="si"><span>Sí, tengo médico tratante</span></label>
+            <label class="op"><input type="radio" name="medico" value="dispuesta"><span>No, pero estoy dispuesta a tener uno</span></label>
+            <label class="op"><input type="radio" name="medico" value="no"><span>No, y no quiero involucrar a un médico</span></label>
+          </div>
+        </fieldset>
+
+        <fieldset class="p">
+          <legend>3. ¿Estás embarazada o amamantando?</legend>
+          <div class="ops">
+            <label class="op"><input type="radio" name="embarazo" value="no"><span>No</span></label>
+            <label class="op"><input type="radio" name="embarazo" value="si"><span>Sí</span></label>
+          </div>
+        </fieldset>
+
+        <fieldset class="p">
+          <legend>4. ¿Tienes actualmente un diagnóstico oncológico activo, o enfermedad renal o hepática avanzada?</legend>
+          <div class="ops">
+            <label class="op"><input type="radio" name="condicion" value="no"><span>No</span></label>
+            <label class="op"><input type="radio" name="condicion" value="si"><span>Sí</span></label>
+          </div>
+        </fieldset>
+
+        <fieldset class="p">
+          <legend>5. ¿Qué esperas del programa respecto a tus medicamentos?</legend>
+          <div class="ops">
+            <label class="op"><input type="radio" name="expectativa" value="medico"><span>Trabajar mi salud para que sea mi médico quien ajuste las dosis</span></label>
+            <label class="op"><input type="radio" name="expectativa" value="suspender"><span>Que Johanna me indique suspenderlos</span></label>
+          </div>
+        </fieldset>
+
+        <fieldset class="p">
+          <legend>6. El programa dura 12 semanas y requiere aplicar cambios de hábitos con acompañamiento. ¿Estás en un momento en que puedes comprometerte?</legend>
+          <div class="ops">
+            <label class="op"><input type="radio" name="compromiso" value="si"><span>Sí, quiero empezar ahora</span></label>
+            <label class="op"><input type="radio" name="compromiso" value="duda"><span>Me interesa, pero quiero conocer los detalles primero</span></label>
+            <label class="op"><input type="radio" name="compromiso" value="no"><span>No, este no es mi momento</span></label>
+          </div>
+        </fieldset>
+
+        <button type="submit" class="btn">Ver si califico</button>
+        <p class="error" id="errorFiltro"></p>
+        <p class="aviso-filtro">Tus respuestas son solo para orientar la consulta. No sustituyen una evaluación médica.</p>
+      </form>
+    </div>
+  </div>
+</div>
+
+<!-- ==================== SÍ CALIFICA ==================== -->
+<div class="s oculto" id="paso-si">
+  <div class="w">
+    <div class="resultado si">
+      <h2>Perfecto. Agenda tu sesión aquí abajo</h2>
+      <p>Son 30 minutos, sin costo. Elige el día y la hora que te queden mejor. Recibirás la confirmación en tu correo.</p>
+      <p><strong>Llega con tus exámenes más recientes a la mano si los tienes.</strong> No son obligatorios, pero hacen que la conversación sea mucho más concreta.</p>
+      <div id="calendly"></div>
+    </div>
+  </div>
+</div>
+
+<!-- ==================== NO CALIFICA ==================== -->
+<div class="s oculto" id="paso-no">
+  <div class="w">
+    <div class="resultado no">
+      <h2 id="tituloNo">Este no es tu momento, y está bien</h2>
+      <p id="mensajeNo"></p>
+      <p>Quédate en la comunidad de WhatsApp. Ahí comparto contenido gratuito y te avisaré cuando abra la próxima cohorte.</p>
+      <a class="wa" href="https://chat.whatsapp.com/I7e0FunKSMh9ZScwKYoaKo" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2 22l5.25-1.38a9.87 9.87 0 0 0 4.79 1.22h.01c5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0 0 12.04 2m0 1.67c2.2 0 4.27.86 5.82 2.42a8.17 8.17 0 0 1 2.42 5.82c0 4.54-3.7 8.24-8.25 8.24a8.2 8.2 0 0 1-4.19-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.19 8.19 0 0 1-1.26-4.38c0-4.54 3.7-8.24 8.25-8.24m-3.2 4.4c-.15 0-.4.06-.61.28-.21.22-.8.79-.8 1.92s.82 2.23.94 2.38c.11.15 1.6 2.45 3.89 3.43.54.24.97.38 1.3.48.55.18 1.05.15 1.44.09.44-.06 1.35-.55 1.54-1.09.19-.53.19-.99.13-1.09-.06-.09-.21-.15-.44-.26-.23-.12-1.35-.67-1.56-.74-.21-.08-.36-.12-.51.11-.15.23-.58.74-.71.89-.13.15-.26.17-.49.06-.23-.12-.97-.36-1.85-1.14-.68-.61-1.14-1.36-1.28-1.59-.13-.23-.01-.35.1-.47.1-.1.23-.26.34-.4.12-.13.15-.23.23-.38.08-.15.04-.28-.02-.4-.06-.11-.51-1.24-.71-1.7-.19-.44-.38-.38-.51-.39z"/></svg>
+        Quedarme en la comunidad
+      </a>
+    </div>
+  </div>
+</div>
+
+<div class="pie">
+  <div class="w">
+    <a href="https://www.renacerbyjohanna.com/index.html#ready" target="_blank" rel="noopener">
+      <img src="assets/logo.png" alt="Renacer by Johanna" width="180" height="167">
+    </a>
+    <p class="sitio"><a href="https://www.renacerbyjohanna.com/index.html#ready" target="_blank" rel="noopener">Conoce más en renacerbyjohanna.com</a></p>
+    <p class="redes">
+      <a href="https://www.instagram.com/renacerbyjohanna" target="_blank" rel="noopener">Instagram @renacerbyjohanna</a><br>
+      <a href="https://www.tiktok.com/@renacerbyjohanna" target="_blank" rel="noopener">TikTok @renacerbyjohanna</a>
+    </p>
+    <p class="legal">
+      Este programa es un acompañamiento educativo en salud y nutrición. No sustituye la consulta, el diagnóstico ni el tratamiento de tu médico, y no suspende ni modifica ninguna medicación. Cualquier ajuste de dosis lo decide tu profesional de salud. Los resultados que se mencionan corresponden a experiencias individuales y no constituyen una garantía.<br><br>
+      © <span id="anio"></span> Renacer by Johanna · Sitio desarrollado por Mercadeo MRR LLC
+    </p>
+  </div>
+</div>
+
+<script src="https://assets.calendly.com/assets/external/widget.js" async></script>
+<script>
+document.getElementById('anio').textContent = new Date().getFullYear();
+
+var CALENDLY = 'https://calendly.com/jdcc2000/nueva-reunion';
+
+/* Motivos de no calificar, con su mensaje */
+var MOTIVOS = {
+  edad: {
+    titulo: 'El programa está pensado para mujeres a partir de los 30',
+    texto: 'El Método Renacer trabaja sobre cambios metabólicos y hormonales propios de esa etapa de la vida. Antes de los 30 hay caminos más apropiados, y no quiero venderte algo que no está pensado para tu cuerpo.'
+  },
+  medico: {
+    titulo: 'Este programa necesita que tengas un médico tratante',
+    texto: 'Johanna acompaña, educa y diseña tu protocolo, pero nunca sustituye a tu médico ni ajusta medicación por su cuenta. Sin ese control médico de fondo, el programa no puede hacerse de forma responsable.'
+  },
+  embarazo: {
+    titulo: 'Durante el embarazo o la lactancia hay que esperar',
+    texto: 'En esta etapa tu cuerpo tiene necesidades muy particulares y los protocolos del programa no están diseñados para ella. Escríbele a Johanna cuando termines esa etapa y con gusto retoman la conversación.'
+  },
+  condicion: {
+    titulo: 'Hablemos primero de forma personal',
+    texto: 'Con un diagnóstico así, cualquier cambio nutricional tiene que coordinarse directamente con tu equipo médico. No quiero que agendes una consulta comercial: escríbele a Johanna por WhatsApp y ella te orienta sobre qué es apropiado en tu caso.'
+  },
+  expectativa: {
+    titulo: 'Hay que aclarar algo importante',
+    texto: 'Johanna no indica suspender medicamentos. Lo que hace el programa es mejorar tu salud para que sea tu médico quien evalúe y decida si hay que ajustar dosis. Si lo que buscas es dejar las pastillas por indicación de ella, este no es el lugar.'
+  },
+  compromiso: {
+    titulo: 'Este no es tu momento, y está bien',
+    texto: 'El programa pide constancia durante 12 semanas. Entrar sin poder sostenerlo termina en frustración, y prefiero que llegues cuando puedas darle lo que pide.'
+  }
+};
+
+var form  = document.getElementById('formFiltro');
+var error = document.getElementById('errorFiltro');
+var calendlyCargado = false;
+
+form.addEventListener('submit', function(e){
+  e.preventDefault();
+  error.style.display = 'none';
+
+  var campos = ['edad','medico','embarazo','condicion','expectativa','compromiso'];
+  var r = {};
+
+  for (var i = 0; i < campos.length; i++){
+    var sel = form.querySelector('input[name=' + campos[i] + ']:checked');
+    if (!sel){
+      error.textContent = 'Falta responder la pregunta ' + (i + 1) + '.';
+      error.style.display = 'block';
+      var primero = form.querySelector('input[name=' + campos[i] + ']');
+      primero.closest('fieldset').scrollIntoView({block:'center'});
+      primero.focus();
+      return;
+    }
+    r[campos[i]] = sel.value;
+  }
+
+  var motivo = null;
+  if (r.edad === 'menor')             motivo = 'edad';
+  else if (r.condicion === 'si')      motivo = 'condicion';
+  else if (r.embarazo === 'si')       motivo = 'embarazo';
+  else if (r.medico === 'no')         motivo = 'medico';
+  else if (r.expectativa === 'suspender') motivo = 'expectativa';
+  else if (r.compromiso === 'no')     motivo = 'compromiso';
+
+  document.getElementById('paso-filtro').classList.add('oculto');
+
+  if (motivo){
+    document.getElementById('tituloNo').textContent  = MOTIVOS[motivo].titulo;
+    document.getElementById('mensajeNo').textContent = MOTIVOS[motivo].texto;
+    document.getElementById('paso-no').classList.remove('oculto');
+    document.getElementById('paso-no').scrollIntoView({block:'start'});
+  } else {
+    document.getElementById('paso-si').classList.remove('oculto');
+    if (!calendlyCargado && window.Calendly){
+      window.Calendly.initInlineWidget({
+        url: CALENDLY + '?hide_gdpr_banner=1&primary_color=463376',
+        parentElement: document.getElementById('calendly')
+      });
+      calendlyCargado = true;
+    }
+    document.getElementById('paso-si').scrollIntoView({block:'start'});
+  }
+});
+
+/* Altura para el iframe de Systeme */
+(function(){
+  var ultimo = 0;
+  function alto(){
+    var h = Math.ceil(document.body.getBoundingClientRect().height);
+    if (h > 400 && Math.abs(h - ultimo) > 2){
+      ultimo = h;
+      try { parent.postMessage({ rbjAltura: h }, '*'); } catch(e){}
+    }
+  }
+  window.addEventListener('load', alto);
+  window.addEventListener('resize', alto);
+  setInterval(alto, 800);
+})();
+</script>
+</body>
+</html>
