@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Más Vida, Menos Pastillas en 90 días — Webinar gratuito</title>
+<meta name="description" content="Webinar gratuito para mujeres. Descubre por qué sigues inflamada, agotada y tomando más medicamentos cada año, y cómo empezar a revertirlo desde la raíz.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400&family=Playfair+Display:ital,wght@1,700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --lila:#F8F6FD; --morado:#463376; --morado-suave:#9B8BC4;
+  --verde:#609354; --verde-claro:#B4CFAD; --verde-medio:#7CAE71; --tinta:#2E2444;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{-webkit-text-size-adjust:100%}
+body{
+  font-family:'Figtree',system-ui,-apple-system,sans-serif;
+  background:var(--lila);color:var(--tinta);
+  line-height:1.55;font-size:17px;overflow-x:hidden;
+}
+img{max-width:100%;height:auto;display:block}
+a{text-decoration:none}
+.w{max-width:1120px;margin:0 auto;padding:0 24px}
+.s{padding:64px 0}
+
+/* sello */
+.sello{width:150px;height:150px}
+.sello svg{width:100%;height:100%;display:block}
+.sello .anillo{animation:girar 22s linear infinite;transform-origin:50% 50%}
+@keyframes girar{to{transform:rotate(360deg)}}
+@media (prefers-reduced-motion:reduce){.sello .anillo{animation:none}}
+
+/* hero */
+.hero{padding:48px 0 36px}
+.hero-g{display:grid;grid-template-columns:1fr 1fr;gap:24px;align-items:center}
+h1{
+  font-weight:900;font-size:clamp(2.5rem,6.4vw,4.5rem);line-height:.94;
+  letter-spacing:-.028em;color:var(--morado);text-transform:uppercase;margin:26px 0 16px;
+}
+.fecha{font-weight:800;font-size:clamp(1rem,2.2vw,1.28rem);color:var(--verde)}
+
+/* registro */
+.tarjeta{background:#fff;border-radius:32px;overflow:hidden}
+.reg-g{display:grid;grid-template-columns:1fr .82fr;align-items:stretch}
+.reg-t{padding:52px 48px}
+.reg-t h2{
+  font-weight:900;font-size:clamp(1.9rem,4vw,2.9rem);line-height:1;
+  letter-spacing:-.02em;color:var(--morado);text-transform:uppercase;margin-bottom:20px;
+}
+.reg-t h2 em{font-style:normal;color:var(--verde);display:block}
+.reg-t p{margin-bottom:16px;color:#4A3E63;max-width:52ch}
+.reg-f{background:#E4DCF4;position:relative;min-height:100%}
+.reg-f img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:60% 45%}
+
+/* formulario */
+.form{margin-top:28px;max-width:460px}
+.campo{margin-bottom:14px}
+.campo label{display:block;font-size:.82rem;font-weight:700;color:var(--morado);margin-bottom:6px}
+.campo input{
+  width:100%;padding:15px 18px;font-size:1rem;font-family:inherit;color:var(--tinta);
+  background:var(--lila);border:2px solid #E3DDF2;border-radius:14px;
+  transition:border-color .15s ease,background .15s ease;
+}
+.campo input::placeholder{color:#A79FBD}
+.campo input:focus{outline:none;border-color:var(--morado-suave);background:#fff}
+.campo input:focus-visible{outline:3px solid var(--verde-medio);outline-offset:2px}
+.btn{
+  display:flex;align-items:center;justify-content:center;gap:10px;width:100%;
+  padding:19px 28px;font-family:inherit;font-size:1.02rem;font-weight:800;
+  letter-spacing:.14em;text-transform:uppercase;color:#fff;background:var(--morado);
+  border:none;border-radius:999px;cursor:pointer;
+  transition:background .18s ease,transform .12s ease;
+}
+.btn:hover{background:#372459}
+.btn:active{transform:translateY(1px)}
+.btn:focus-visible{outline:3px solid var(--verde);outline-offset:3px}
+.btn[disabled]{opacity:.6;cursor:wait}
+.aviso{margin-top:12px;font-size:.8rem;color:#7B7192;line-height:1.45}
+.error{margin-top:12px;font-size:.9rem;font-weight:600;color:#B4453C;display:none}
+
+/* dolores */
+.dolores{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.dolores2{display:grid;grid-template-columns:repeat(2,1fr);gap:20px;margin:20px auto 0;max-width:73%}
+.dolor{background:#fff;border-radius:22px;padding:30px 26px;font-size:1.02rem;color:#4A3E63;border-left:5px solid var(--verde-claro)}
+.dolores .dolor:nth-child(2),.dolores2 .dolor:nth-child(1){border-left-color:var(--morado-suave)}
+
+/* aprender */
+.apr-g{display:grid;grid-template-columns:.85fr 1.15fr;gap:48px;align-items:center}
+.apr-g h2{font-weight:900;font-size:clamp(2.2rem,5vw,3.5rem);line-height:.98;letter-spacing:-.025em;color:var(--morado)}
+.apr-g h2 span{color:var(--verde)}
+.puntos{display:flex;flex-direction:column;gap:18px}
+.punto{border-radius:22px;padding:26px 30px;font-size:1.08rem;font-weight:500;line-height:1.45}
+.punto:nth-child(odd){background:var(--verde-claro);color:#2B4A26}
+.punto:nth-child(even){background:var(--morado-suave);color:#241A3F}
+
+/* bio */
+.bio{background:#fff;border-radius:32px;overflow:hidden}
+.bio-g{display:grid;grid-template-columns:1.1fr .9fr;align-items:end}
+.bio-t{padding:52px 48px}
+.bio-t h2{font-weight:900;font-size:clamp(2.2rem,5vw,3.4rem);line-height:.98;letter-spacing:-.025em;color:var(--morado);margin-bottom:24px}
+.bio-caja{background:var(--verde-claro);border-radius:22px;padding:28px 30px;color:#26401F}
+.bio-caja p{margin-bottom:12px}
+.bio-caja p:last-child{margin-bottom:0}
+.bio-f{display:flex;align-items:flex-end;justify-content:center;padding-top:24px}
+.bio-f img{max-width:400px;width:100%}
+
+/* para ti si */
+.parati{background:var(--morado);border-radius:32px;padding:56px 48px;color:#fff}
+.parati-g{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center}
+.parati h2{font-weight:900;font-size:clamp(2rem,4.4vw,3.1rem);line-height:1;letter-spacing:-.02em}
+.parati h2 i{font-family:'Playfair Display',Georgia,serif;font-weight:700;font-style:italic;display:block}
+.parati ul{list-style:none;display:flex;flex-direction:column;gap:16px}
+.parati li{position:relative;padding-left:34px;font-size:1.1rem;color:#EDE7FA;line-height:1.4}
+.parati li::before{content:"";position:absolute;left:0;top:.42em;width:16px;height:16px;border-radius:50%;background:var(--verde-medio)}
+
+/* cierre */
+.cierre{text-align:center}
+.cierre h2{font-weight:900;font-size:clamp(2rem,4.6vw,3.2rem);line-height:1;letter-spacing:-.02em;color:var(--morado);margin-bottom:12px}
+.cierre .cuando{font-weight:800;font-size:1.22rem;color:var(--verde);margin-bottom:32px}
+.cierre .form{margin:0 auto}
+
+/* pie */
+.pie{background:linear-gradient(100deg,#EFEBF8 0%,var(--morado) 22%,#3A2A63 78%,#EFEBF8 100%);padding:56px 0 40px;text-align:center;color:#fff}
+.pie img{width:78px;margin:0 auto 22px}
+.pie .redes{font-size:1rem;line-height:1.7;color:#E4DCF4}
+.pie .redes a{color:#fff;border-bottom:1px solid rgba(255,255,255,.35)}
+.pie .firma{font-family:'Playfair Display',Georgia,serif;font-style:italic;font-weight:700;font-size:clamp(2rem,5vw,3rem);color:rgba(255,255,255,.55);margin-top:26px}
+.pie .legal{margin-top:24px;font-size:.78rem;color:rgba(255,255,255,.62);line-height:1.6}
+
+@media (max-width:900px){
+  .s{padding:44px 0}
+  .w{padding:0 18px}
+  .hero-g,.reg-g,.dolores,.apr-g,.bio-g,.parati-g{grid-template-columns:1fr}
+  .hero-g{gap:8px}
+  .hero-foto{max-width:400px;margin:0 auto}
+  .reg-t,.bio-t{padding:36px 26px}
+  .reg-f{order:-1;height:230px;min-height:230px}
+  .dolores2{grid-template-columns:1fr;max-width:100%}
+  .apr-g{gap:26px}
+  .bio-f{padding-top:0}
+  .bio-f img{max-width:280px}
+  .parati{padding:38px 24px}
+  .parati-g{gap:24px}
+  .sello{width:112px;height:112px}
+  .form{max-width:100%}
+}
+@media (max-width:600px){body{font-size:16px}}
+</style>
+</head>
+<body>
+
+<div class="hero">
+  <div class="w hero-g">
+    <div>
+      <div class="sello" aria-hidden="true">
+        <svg viewBox="0 0 200 200">
+          <defs><path id="circ" d="M100,100 m-72,0 a72,72 0 1,1 144,0 a72,72 0 1,1 -144,0"/></defs>
+          <g class="anillo">
+            <text font-family="Figtree, sans-serif" font-size="17.5" font-weight="800" fill="#463376" letter-spacing="3.1">
+              <textPath href="#circ" startOffset="1%">WEBINAR GRATUITO PARA MUJERES</textPath>
+            </text>
+          </g>
+          <g fill="#609354" transform="translate(100,100)">
+            <g id="pet"><ellipse cx="0" cy="-26" rx="8.5" ry="20"/></g>
+            <use href="#pet" transform="rotate(45)"/><use href="#pet" transform="rotate(90)"/>
+            <use href="#pet" transform="rotate(135)"/><use href="#pet" transform="rotate(180)"/>
+            <use href="#pet" transform="rotate(225)"/><use href="#pet" transform="rotate(270)"/>
+            <use href="#pet" transform="rotate(315)"/>
+          </g>
+        </svg>
+      </div>
+      <h1>Más vida<br>menos pastillas<br>en 90 días</h1>
+      <p class="fecha">Miércoles 9 de septiembre · 7:00 PM hora de Houston (CT)</p>
+    </div>
+    <div class="hero-foto">
+      <img src="assets/johanna-hero.jpg" alt="Johanna, médico integral y creadora del Método Renacer" width="605" height="455">
+    </div>
+  </div>
+</div>
+
+<div class="w">
+  <div class="tarjeta">
+    <div class="reg-g">
+      <div class="reg-t">
+        <h2>Quiero registrarme<em>gratis</em></h2>
+        <p>Descubre por qué sigues inflamada, agotada y tomando más medicamentos cada año, aunque hagas todo bien, y cómo empezar a revertirlo desde la raíz sin dietas extremas ni abandonar la supervisión médica.</p>
+        <p>Descubrirás cómo pasar de vivir inflamada, agotada y dependiendo de pastillas, a convertirte en una mujer con energía y en control de tu salud.</p>
+
+        <!-- ==========================================================
+             FORMULARIO
+             Opción A (activa): envía a Google Apps Script.
+             Opción B: borra este <form> completo y pega aquí el código
+             de inserción del formulario de Systeme.io.
+        =========================================================== -->
+        <form class="form" data-registro novalidate>
+          <div class="campo">
+            <label for="nombre">Tu nombre</label>
+            <input type="text" id="nombre" name="nombre" placeholder="María" autocomplete="given-name" required>
+          </div>
+          <div class="campo">
+            <label for="email">Tu correo electrónico</label>
+            <input type="email" id="email" name="email" placeholder="maria@correo.com" autocomplete="email" required>
+          </div>
+          <button type="submit" class="btn">Regístrate acá</button>
+          <p class="error" data-error></p>
+          <p class="aviso">Te enviaremos el enlace del webinar a este correo. Sin spam: solo lo relacionado con el webinar y el Método Renacer.</p>
+        </form>
+      </div>
+      <div class="reg-f">
+        <img src="assets/inflamacion.jpg" alt="Mujer sosteniéndose el abdomen por la inflamación" width="760" height="723" loading="lazy">
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="s">
+  <div class="w">
+    <div class="dolores">
+      <div class="dolor">Sientes que tu cuerpo ya no responde como antes.</div>
+      <div class="dolor">Te levantas hinchada, pesada, sin energía, y aunque duermas, sientes que tu cuerpo no se recupera.</div>
+      <div class="dolor">Cada año tu médico te agrega una nueva pastilla: para el colesterol, para el azúcar, para la presión, para la ansiedad. Y nadie te explica por qué tu cuerpo llegó a ese punto.</div>
+    </div>
+    <div class="dolores2">
+      <div class="dolor">Has probado dietas. Has comprado suplementos. Has visto videos en YouTube. Has seguido consejos en Instagram o TikTok, y nada te ha funcionado porque tu inflamación sigue ahí.</div>
+      <div class="dolor">No te gusta depender de medicamentos, pero cada vez sientes que tienes menos opciones.</div>
+    </div>
+  </div>
+</div>
+
+<div class="s">
+  <div class="w apr-g">
+    <h2>¿Qué vas a <span>aprender?</span></h2>
+    <div class="puntos">
+      <div class="punto">Por qué no es tu edad, ni tu genética, ni falta de disciplina lo que te mantiene inflamada y agotada.</div>
+      <div class="punto">Cómo empezar a reducir la inflamación desde la raíz, sin dietas extremas ni vivir restringida.</div>
+      <div class="punto">Por qué cada año necesitas más medicamentos aunque estés haciendo todo bien.</div>
+    </div>
+  </div>
+</div>
+
+<div class="s">
+  <div class="w">
+    <div class="bio">
+      <div class="bio-g">
+        <div class="bio-t">
+          <h2>¡Hola, soy Johanna!</h2>
+          <div class="bio-caja">
+            <p>Médico integral, coach de salud y nutrición holística, fisioterapeuta, amante de la salud y el bienestar, y creadora del Método Renacer.</p>
+            <p>Por más de 25 años he ayudado a miles de personas a recuperar su salud y bienestar tratando el problema desde la raíz.</p>
+            <p>Soy venezolana y resido en los Estados Unidos desde hace 26 años. Viví 11 años en Filadelfia y llevo 15 en Houston. Soy mamá de una hermosa adolescente.</p>
+          </div>
+        </div>
+        <div class="bio-f">
+          <img src="assets/johanna-tablet.jpg" alt="Johanna, creadora del Método Renacer" width="520" height="779" loading="lazy">
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="s">
+  <div class="w">
+    <div class="parati">
+      <div class="parati-g">
+        <h2>Este webinar gratuito <i>es para ti si:</i></h2>
+        <ul>
+          <li>Estás cansada de sentirte cansada.</li>
+          <li>No quieres depender de soluciones temporales.</li>
+          <li>Quieres entender tu cuerpo y recuperar el control.</li>
+          <li>Quieres reducir o eliminar la dependencia a los medicamentos.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="s cierre">
+  <div class="w">
+    <h2>Completa tu registro</h2>
+    <p class="cuando">Miércoles 9 de septiembre · 7:00 PM hora de Houston (CT)</p>
+    <form class="form" data-registro novalidate>
+      <div class="campo">
+        <label for="nombre2">Tu nombre</label>
+        <input type="text" id="nombre2" name="nombre" placeholder="María" autocomplete="given-name" required>
+      </div>
+      <div class="campo">
+        <label for="email2">Tu correo electrónico</label>
+        <input type="email" id="email2" name="email" placeholder="maria@correo.com" autocomplete="email" required>
+      </div>
+      <button type="submit" class="btn">Regístrate acá</button>
+      <p class="error" data-error></p>
+    </form>
+  </div>
+</div>
+
+<div class="pie">
+  <div class="w">
+    <img src="assets/logo.png" alt="Renacer by Johanna" width="180" height="167">
+    <p class="redes">
+      <a href="https://www.instagram.com/renacerbyjohanna" target="_blank" rel="noopener">Instagram @renacerbyjohanna</a><br>
+      <a href="https://www.tiktok.com/@renacerbyjohanna" target="_blank" rel="noopener">TikTok @renacerbyjohanna</a>
+    </p>
+    <p class="firma">Con cariño, Johanna</p>
+    <p class="legal">
+      Este webinar tiene fines educativos y no sustituye la consulta, el diagnóstico ni el tratamiento de tu médico.<br>
+      No suspendas ni modifiques ningún medicamento sin la supervisión de tu profesional de salud.<br>
+      © <span id="anio"></span> Renacer by Johanna · Sitio desarrollado por Mercadeo MRR LLC
+    </p>
+  </div>
+</div>
+
+<script>
+document.getElementById('anio').textContent = new Date().getFullYear();
+
+/* ============== CONFIGURACIÓN ==============
+   ENDPOINT: URL /exec del Google Apps Script.
+   GRACIAS:  página de agradecimiento.
+   Si usas el formulario de Systeme.io, ignora ENDPOINT.
+============================================= */
+var ENDPOINT = 'PEGAR_URL_APPS_SCRIPT_AQUI';
+var GRACIAS  = 'gracias.html';
+
+document.querySelectorAll('[data-registro]').forEach(function(form){
+  var btn = form.querySelector('button');
+  var err = form.querySelector('[data-error]');
+
+  form.addEventListener('submit', function(e){
+    e.preventDefault();
+    err.style.display = 'none';
+
+    var nombre = form.querySelector('[name=nombre]').value.trim();
+    var email  = form.querySelector('[name=email]').value.trim();
+
+    if (nombre.length < 2){
+      err.textContent = 'Escribe tu nombre para continuar.';
+      err.style.display = 'block';
+      form.querySelector('[name=nombre]').focus();
+      return;
+    }
+    if (!/^[^@\s]+@[^@\s]+\.[a-z]{2,}$/i.test(email)){
+      err.textContent = 'Revisa tu correo: parece que falta algo.';
+      err.style.display = 'block';
+      form.querySelector('[name=email]').focus();
+      return;
+    }
+
+    btn.disabled = true;
+    btn.textContent = 'Registrando...';
+
+    /* Image ping: funciona dentro de iframes y no depende de CORS */
+    var ping = new Image();
+    var hecho = false;
+    function seguir(){
+      if (hecho) return;
+      hecho = true;
+      window.location.href = GRACIAS;   /* no usar window.open dentro de iframe */
+    }
+    ping.onload = seguir;
+    ping.onerror = seguir;
+    ping.src = ENDPOINT
+      + '?nombre=' + encodeURIComponent(nombre)
+      + '&email='  + encodeURIComponent(email)
+      + '&origen=' + encodeURIComponent('landing-webinar')
+      + '&t='      + Date.now();
+    setTimeout(seguir, 2500);
+  });
+});
+
+/* Reporta la altura al contenedor para que el iframe crezca solo */
+(function(){
+  var ultimo = 0;
+  function alto(){
+    /* Se mide el <body>, no documentElement: documentElement crece hasta la
+       altura del iframe y provocaria un bucle infinito de crecimiento. */
+    var h = Math.ceil(document.body.getBoundingClientRect().height);
+    if (h > 400 && Math.abs(h - ultimo) > 2){
+      ultimo = h;
+      try { parent.postMessage({ rbjAltura: h }, '*'); } catch(e){}
+    }
+  }
+  window.addEventListener('load', alto);
+  window.addEventListener('resize', alto);
+  setInterval(alto, 800);
+})();
+</script>
+</body>
+</html>
