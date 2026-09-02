@@ -120,7 +120,7 @@ h1 i{font-family:'Playfair Display',Georgia,serif;font-style:italic;font-weight:
 }
 .resultado .wa:hover{background:#1E8A4B}
 .resultado .wa svg{width:22px;height:22px;fill:currentColor;flex:0 0 22px}
-#calendly{margin-top:28px;min-height:700px}
+#calendly{margin-top:28px;height:1060px;transition:height .2s ease}
 
 /* pie */
 .pie{background:linear-gradient(100deg,#EFEBF8 0%,var(--morado) 22%,#3A2A63 78%,#EFEBF8 100%);padding:52px 0 38px;text-align:center;color:#fff}
@@ -142,6 +142,7 @@ h1 i{font-family:'Playfair Display',Georgia,serif;font-style:italic;font-weight:
   .logros{grid-template-columns:1fr}
   .hero .sello{width:96px;height:96px}
   .resultado .wa{width:100%;justify-content:center;padding:18px 20px;font-size:.9rem}
+  #calendly{height:1240px}
 }
 @media (max-width:600px){body{font-size:16px}}
 </style>
@@ -360,6 +361,41 @@ var MOTIVOS = {
   }
 };
 
+/* Monta el calendario. widget.js carga en diferido, asi que se reintenta
+   durante unos segundos y, si no aparece, se muestra un enlace directo. */
+function montarCalendly(){
+  if (calendlyCargado) return;
+  var caja = document.getElementById('calendly');
+  var intentos = 0;
+
+  (function probar(){
+    if (window.Calendly && window.Calendly.initInlineWidget){
+      window.Calendly.initInlineWidget({
+        url: CALENDLY
+             + '?hide_gdpr_banner=1&primary_color=463376'
+             + '&embed_domain=' + encodeURIComponent(location.hostname || 'localhost')
+             + '&embed_type=Inline',
+        parentElement: caja
+      });
+      calendlyCargado = true;
+      return;
+    }
+    if (++intentos > 40){        /* ~10 segundos */
+      caja.style.height = 'auto';
+      caja.innerHTML =
+        '<p style="color:#4A3E63;margin-bottom:18px">El calendario está tardando en cargar. ' +
+        'Abre la agenda en una pestaña nueva:</p>' +
+        '<a href="' + CALENDLY + '" target="_blank" rel="noopener" ' +
+        'style="display:inline-flex;align-items:center;justify-content:center;' +
+        'padding:18px 32px;font-weight:800;letter-spacing:.08em;text-transform:uppercase;' +
+        'color:#fff;background:#463376;border-radius:999px;font-size:.97rem">' +
+        'Abrir la agenda</a>';
+      return;
+    }
+    setTimeout(probar, 250);
+  })();
+}
+
 var form  = document.getElementById('formFiltro');
 var error = document.getElementById('errorFiltro');
 var calendlyCargado = false;
@@ -401,16 +437,25 @@ form.addEventListener('submit', function(e){
     document.getElementById('paso-no').scrollIntoView({block:'start'});
   } else {
     document.getElementById('paso-si').classList.remove('oculto');
-    if (!calendlyCargado && window.Calendly){
-      window.Calendly.initInlineWidget({
-        url: CALENDLY + '?hide_gdpr_banner=1&primary_color=463376',
-        parentElement: document.getElementById('calendly')
-      });
-      calendlyCargado = true;
-    }
+    montarCalendly();
     document.getElementById('paso-si').scrollIntoView({block:'start'});
   }
 });
+
+/* Calendly avisa cuanto mide su contenido; ajustamos el contenedor
+   para que el calendario no quede cortado. */
+window.addEventListener('message', function(e){
+  var d = e.data;
+  if (!d || typeof d !== 'object') return;
+  if (typeof d.event !== 'string' || d.event.indexOf('calendly.') !== 0) return;
+  if (d.event !== 'calendly.page_height') return;
+
+  var h = d.payload && d.payload.height;
+  if (typeof h === 'string') h = parseInt(h, 10);
+  if (typeof h === 'number' && h > 400){
+    document.getElementById('calendly').style.height = (h + 20) + 'px';
+  }
+}, false);
 
 /* Altura para el iframe de Systeme */
 (function(){
