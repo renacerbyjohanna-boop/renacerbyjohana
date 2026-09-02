@@ -66,6 +66,21 @@ h1 i{font-family:'Playfair Display',Georgia,serif;font-style:italic;font-weight:
 .btn-tarjeta:hover{background:#372459}
 .btn-tarjeta:focus-visible{outline:3px solid var(--verde);outline-offset:3px}
 .btn svg{width:22px;height:22px;flex:0 0 22px}
+.cuotas{
+  margin-top:22px;padding:22px 24px;background:var(--lila);
+  border:2px solid #E3DDF2;border-radius:20px;
+  max-width:420px;margin-left:auto;margin-right:auto;
+}
+.cuotas .titulo{font-weight:800;color:var(--morado);font-size:1rem;margin-bottom:8px}
+.cuotas .marcas{
+  display:flex;align-items:center;justify-content:center;gap:10px;
+  flex-wrap:wrap;margin:14px 0 12px;
+}
+.cuotas .marca{
+  padding:7px 16px;background:#fff;border:1px solid #E3DDF2;border-radius:999px;
+  font-weight:800;font-size:.9rem;color:var(--morado);letter-spacing:.01em;
+}
+.cuotas .letra{font-size:.82rem;color:#7B7192;line-height:1.5}
 .seguro{
   margin-top:18px;font-size:.85rem;color:#7B7192;
   display:flex;align-items:center;justify-content:center;gap:8px;
@@ -186,7 +201,7 @@ h1 i{font-family:'Playfair Display',Georgia,serif;font-style:italic;font-weight:
     <div class="precio">
       <p class="et">Programa completo de 12 semanas</p>
       <p class="cifra"><sup>$</sup>1,497</p>
-      <p class="moneda">USD · pago único</p>
+      <p class="moneda">USD · pago único o en cuotas</p>
       <p class="detalle">Incluye las 12 semanas completas, la mentoría inicial 1:1 y el acompañamiento por WhatsApp durante todo el programa.</p>
 
       <div class="botones">
@@ -198,6 +213,15 @@ h1 i{font-family:'Playfair Display',Georgia,serif;font-style:italic;font-weight:
           </svg>
           Pagar con tarjeta
         </a>
+      </div>
+
+      <div class="cuotas">
+        <p class="titulo">¿Prefieres pagarlo en cuotas?</p>
+        <div class="marcas">
+          <span class="marca">Klarna</span>
+          <span class="marca">Affirm</span>
+        </div>
+        <p class="letra">Al pagar con tarjeta puedes elegir Klarna o Affirm y dividir el monto en cuotas. Hay opciones sin intereses, sujetas a la aprobación del proveedor. Las condiciones y el plazo los define Klarna o Affirm, no Renacer by Johanna.</p>
       </div>
 
       <p class="seguro">
