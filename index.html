@@ -10,14 +10,14 @@
 <link href="https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400&family=Playfair+Display:ital,wght@1,700&display=swap" rel="stylesheet">
 <style>
 :root{
-  --lila:#F8F6FD; --morado:#463376; --morado-suave:#9B8BC4;
-  --verde:#609354; --verde-claro:#B4CFAD; --verde-medio:#7CAE71; --tinta:#2E2444;
+  --lila:#F7EDFA; --tarjeta:#FCF7FD; --borde:#F0E0F6; --morado:#7F2C95; --morado-suave:#CEAFD7;
+  --verde:#396003; --verde-claro:#D8EDB9; --verde-medio:#72C006; --tinta:#3B2340;
 }
 *{box-sizing:border-box;margin:0;padding:0}
 html{-webkit-text-size-adjust:100%}
 body{
   font-family:'Figtree',system-ui,-apple-system,sans-serif;
-  background:var(--lila);color:var(--tinta);
+  background:#FFFFFF;color:var(--tinta);
   line-height:1.55;font-size:17px;overflow-x:hidden;
 }
 img{max-width:100%;height:auto;display:block}
@@ -42,7 +42,7 @@ h1{
 .fecha{font-weight:800;font-size:clamp(1rem,2.2vw,1.28rem);color:var(--verde)}
 
 /* registro */
-.tarjeta{background:#fff;border-radius:32px;overflow:hidden}
+.tarjeta{background:var(--tarjeta);border:1px solid var(--borde);border-radius:32px;overflow:hidden}
 .reg-g{display:grid;grid-template-columns:1fr .82fr;align-items:stretch}
 .reg-t{padding:52px 48px}
 .reg-t h2{
@@ -50,8 +50,8 @@ h1{
   letter-spacing:-.02em;color:var(--morado);text-transform:uppercase;margin-bottom:20px;
 }
 .reg-t h2 em{font-style:normal;color:var(--verde);display:block}
-.reg-t p{margin-bottom:16px;color:#4A3E63;max-width:52ch}
-.reg-f{background:#E4DCF4;position:relative;min-height:100%}
+.reg-t p{margin-bottom:16px;color:#56405C;max-width:52ch}
+.reg-f{background:#EED9F5;position:relative;min-height:100%}
 .reg-f img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:60% 45%}
 
 /* formulario */
@@ -60,10 +60,10 @@ h1{
 .campo label{display:block;font-size:.82rem;font-weight:700;color:var(--morado);margin-bottom:6px}
 .campo input{
   width:100%;padding:15px 18px;font-size:1rem;font-family:inherit;color:var(--tinta);
-  background:var(--lila);border:2px solid #E3DDF2;border-radius:14px;
+  background:var(--lila);border:2px solid #EBD3F2;border-radius:14px;
   transition:border-color .15s ease,background .15s ease;
 }
-.campo input::placeholder{color:#A79FBD}
+.campo input::placeholder{color:#B39CBA}
 .campo input:focus{outline:none;border-color:var(--morado-suave);background:#fff}
 .campo input:focus-visible{outline:3px solid var(--verde-medio);outline-offset:2px}
 .btn{
@@ -73,17 +73,17 @@ h1{
   border:none;border-radius:999px;cursor:pointer;
   transition:background .18s ease,transform .12s ease;
 }
-.btn:hover{background:#372459}
+.btn:hover{background:#5B206B}
 .btn:active{transform:translateY(1px)}
 .btn:focus-visible{outline:3px solid var(--verde);outline-offset:3px}
 .btn[disabled]{opacity:.6;cursor:wait}
-.aviso{margin-top:12px;font-size:.8rem;color:#7B7192;line-height:1.45}
+.aviso{margin-top:12px;font-size:.8rem;color:#85718C;line-height:1.45}
 .error{margin-top:12px;font-size:.9rem;font-weight:600;color:#B4453C;display:none}
 
 /* dolores */
 .dolores{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
 .dolores2{display:grid;grid-template-columns:repeat(2,1fr);gap:20px;margin:20px auto 0;max-width:73%}
-.dolor{background:#fff;border-radius:22px;padding:30px 26px;font-size:1.02rem;color:#4A3E63;border-left:5px solid var(--verde-claro)}
+.dolor{background:var(--tarjeta);border:1px solid var(--borde);border-radius:22px;padding:30px 26px;font-size:1.02rem;color:#56405C;border-left:5px solid var(--verde-claro)}
 .dolores .dolor:nth-child(2),.dolores2 .dolor:nth-child(1){border-left-color:var(--morado-suave)}
 
 /* aprender */
@@ -92,15 +92,15 @@ h1{
 .apr-g h2 span{color:var(--verde)}
 .puntos{display:flex;flex-direction:column;gap:18px}
 .punto{border-radius:22px;padding:26px 30px;font-size:1.08rem;font-weight:500;line-height:1.45}
-.punto:nth-child(odd){background:var(--verde-claro);color:#2B4A26}
-.punto:nth-child(even){background:var(--morado-suave);color:#241A3F}
+.punto:nth-child(odd){background:var(--verde-claro);color:#2C4A02}
+.punto:nth-child(even){background:var(--morado-suave);color:#3B1147}
 
 /* bio */
-.bio{background:#fff;border-radius:32px;overflow:hidden}
+.bio{background:var(--tarjeta);border:1px solid var(--borde);border-radius:32px;overflow:hidden}
 .bio-g{display:grid;grid-template-columns:1.1fr .9fr;align-items:end}
 .bio-t{padding:52px 48px}
 .bio-t h2{font-weight:900;font-size:clamp(2.2rem,5vw,3.4rem);line-height:.98;letter-spacing:-.025em;color:var(--morado);margin-bottom:24px}
-.bio-caja{background:var(--verde-claro);border-radius:22px;padding:28px 30px;color:#26401F}
+.bio-caja{background:var(--verde-claro);border-radius:22px;padding:28px 30px;color:#2C4A02}
 .bio-caja p{margin-bottom:12px}
 .bio-caja p:last-child{margin-bottom:0}
 .bio-f{display:flex;align-items:flex-end;justify-content:center;padding-top:24px}
@@ -112,7 +112,7 @@ h1{
 .parati h2{font-weight:900;font-size:clamp(2rem,4.4vw,3.1rem);line-height:1;letter-spacing:-.02em}
 .parati h2 i{font-family:'Playfair Display',Georgia,serif;font-weight:700;font-style:italic;display:block}
 .parati ul{list-style:none;display:flex;flex-direction:column;gap:16px}
-.parati li{position:relative;padding-left:34px;font-size:1.1rem;color:#EDE7FA;line-height:1.4}
+.parati li{position:relative;padding-left:34px;font-size:1.1rem;color:#F3E2F8;line-height:1.4}
 .parati li::before{content:"";position:absolute;left:0;top:.42em;width:16px;height:16px;border-radius:50%;background:var(--verde-medio)}
 
 /* cierre */
@@ -122,10 +122,18 @@ h1{
 .cierre .form{margin:0 auto}
 
 /* pie */
-.pie{background:linear-gradient(100deg,#EFEBF8 0%,var(--morado) 22%,#3A2A63 78%,#EFEBF8 100%);padding:56px 0 40px;text-align:center;color:#fff}
+.pie{background:linear-gradient(100deg,#FFFFFF 0%,var(--morado) 22%,#5B206B 78%,#FFFFFF 100%);padding:56px 0 40px;text-align:center;color:#fff}
 .pie img{width:78px;margin:0 auto 22px}
-.pie .redes{font-size:1rem;line-height:1.7;color:#E4DCF4}
+.pie .redes{font-size:1rem;line-height:1.7;color:#EED9F5}
 .pie .redes a{color:#fff;border-bottom:1px solid rgba(255,255,255,.35)}
+.pie .sitio{margin-bottom:14px}
+.pie .sitio a{
+  display:inline-block;padding:11px 26px;border:2px solid rgba(255,255,255,.55);
+  border-radius:999px;color:#fff;font-weight:800;font-size:.92rem;
+  letter-spacing:.06em;transition:background .18s ease,border-color .18s ease;
+}
+.pie .sitio a:hover{background:rgba(255,255,255,.14);border-color:#fff}
+.pie .sitio a:focus-visible{outline:3px solid #72C006;outline-offset:3px}
 .pie .firma{font-family:'Playfair Display',Georgia,serif;font-style:italic;font-weight:700;font-size:clamp(2rem,5vw,3rem);color:rgba(255,255,255,.55);margin-top:26px}
 .pie .legal{margin-top:24px;font-size:.78rem;color:rgba(255,255,255,.62);line-height:1.6}
 
@@ -158,11 +166,11 @@ h1{
         <svg viewBox="0 0 200 200">
           <defs><path id="circ" d="M100,100 m-72,0 a72,72 0 1,1 144,0 a72,72 0 1,1 -144,0"/></defs>
           <g class="anillo">
-            <text font-family="Figtree, sans-serif" font-size="17.5" font-weight="800" fill="#463376" letter-spacing="3.1">
+            <text font-family="Figtree, sans-serif" font-size="17.5" font-weight="800" fill="#7F2C95" letter-spacing="3.1">
               <textPath href="#circ" startOffset="1%">WEBINAR GRATUITO PARA MUJERES</textPath>
             </text>
           </g>
-          <g fill="#609354" transform="translate(100,100)">
+          <g fill="#396003" transform="translate(100,100)">
             <g id="pet"><ellipse cx="0" cy="-26" rx="8.5" ry="20"/></g>
             <use href="#pet" transform="rotate(45)"/><use href="#pet" transform="rotate(90)"/>
             <use href="#pet" transform="rotate(135)"/><use href="#pet" transform="rotate(180)"/>
@@ -297,7 +305,10 @@ h1{
 
 <div class="pie">
   <div class="w">
-    <img src="assets/logo.png" alt="Renacer by Johanna" width="180" height="167">
+    <a href="https://www.renacerbyjohanna.com/index.html#ready" target="_blank" rel="noopener">
+      <img src="assets/logo.png" alt="Renacer by Johanna" width="180" height="167">
+    </a>
+    <p class="sitio"><a href="https://www.renacerbyjohanna.com/index.html#ready" target="_blank" rel="noopener">Conoce más en renacerbyjohanna.com</a></p>
     <p class="redes">
       <a href="https://www.instagram.com/renacerbyjohanna" target="_blank" rel="noopener">Instagram @renacerbyjohanna</a><br>
       <a href="https://www.tiktok.com/@renacerbyjohanna" target="_blank" rel="noopener">TikTok @renacerbyjohanna</a>
