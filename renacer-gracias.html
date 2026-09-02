@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex">
+<title>¡Ya casi! Únete al grupo de WhatsApp — Renacer by Johanna</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400&family=Playfair+Display:ital,wght@1,700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --lila:#F8F6FD; --morado:#463376; --morado-suave:#9B8BC4;
+  --verde:#609354; --verde-claro:#B4CFAD; --tinta:#2E2444;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{
+  font-family:'Figtree',system-ui,sans-serif;background:var(--lila);
+  color:var(--tinta);line-height:1.55;font-size:17px;
+}
+.wrap{max-width:1000px;margin:0 auto;padding:0 24px}
+
+.top{padding:56px 0 20px;text-align:center}
+.top .check{
+  width:76px;height:76px;margin:0 auto 26px;border-radius:50%;
+  background:var(--verde);display:flex;align-items:center;justify-content:center;
+}
+.top .check svg{width:38px;height:38px}
+.top .intro{font-size:1.18rem;color:#4A3E63;max-width:36ch;margin:0 auto 14px;font-weight:600}
+.top h1{
+  font-family:'Playfair Display',Georgia,serif;font-style:italic;font-weight:700;
+  font-size:clamp(2rem,5.4vw,3.4rem);line-height:1.05;color:var(--verde);
+  margin-bottom:26px;
+}
+
+.paso{
+  background:#fff;border-radius:28px;padding:44px 40px;
+  text-align:center;margin-bottom:22px;
+}
+.paso h2{
+  font-weight:900;font-size:clamp(1.4rem,3.2vw,2rem);line-height:1.12;
+  color:var(--morado);margin-bottom:14px;letter-spacing:-.015em;
+}
+.paso p{color:#4A3E63;max-width:50ch;margin:0 auto 26px}
+.btn{
+  display:inline-flex;align-items:center;justify-content:center;gap:12px;
+  padding:20px 38px;font-size:1.02rem;font-weight:800;
+  letter-spacing:.12em;text-transform:uppercase;text-decoration:none;
+  color:#fff;background:#25A55B;border-radius:999px;
+  transition:background .18s ease,transform .12s ease;
+}
+.btn:hover{background:#1E8A4B}
+.btn:active{transform:translateY(1px)}
+.btn:focus-visible{outline:3px solid var(--morado);outline-offset:3px}
+.btn svg{width:22px;height:22px;fill:currentColor}
+.recordatorio{
+  margin-top:20px;font-size:.92rem;font-weight:700;color:var(--morado);
+}
+
+.cuando{
+  background:var(--morado);color:#fff;border-radius:28px;
+  padding:34px 40px;text-align:center;margin-bottom:22px;
+}
+.cuando .etiqueta{font-size:.95rem;color:#C9BEE6;margin-bottom:6px}
+.cuando .dato{font-weight:900;font-size:clamp(1.3rem,3.4vw,2rem);line-height:1.2;letter-spacing:-.015em}
+
+.pasos{background:#fff;border-radius:28px;padding:44px 40px}
+.pasos h2{
+  font-weight:900;font-size:clamp(1.6rem,3.6vw,2.3rem);color:var(--morado);
+  margin-bottom:26px;letter-spacing:-.02em;
+}
+.pasos h2 i{
+  font-family:'Playfair Display',Georgia,serif;font-style:italic;
+  display:block;color:var(--verde);
+}
+.lista{display:flex;flex-direction:column;gap:18px;counter-reset:p}
+.item{
+  display:grid;grid-template-columns:44px 1fr;gap:18px;align-items:start;
+  background:var(--lila);border-radius:20px;padding:22px 24px;
+}
+.item .num{
+  counter-increment:p;width:44px;height:44px;border-radius:50%;
+  background:var(--verde-claro);color:#2B4A26;
+  display:flex;align-items:center;justify-content:center;
+  font-weight:900;font-size:1.15rem;
+}
+.item .num::before{content:counter(p)}
+.item h3{font-weight:800;font-size:1.06rem;color:var(--morado);margin-bottom:5px}
+.item p{color:#4A3E63;font-size:.98rem;margin:0}
+
+footer{
+  background:linear-gradient(100deg,#EFEBF8 0%,var(--morado) 22%,#3A2A63 78%,#EFEBF8 100%);
+  padding:48px 0 36px;text-align:center;color:#fff;margin-top:56px;
+}
+footer img{width:70px;height:auto;margin-bottom:18px}
+footer .redes{font-size:.98rem;line-height:1.7;color:#E4DCF4}
+footer .redes a{color:#fff;text-decoration:none;border-bottom:1px solid rgba(255,255,255,.35)}
+footer .legal{margin-top:22px;font-size:.78rem;color:rgba(255,255,255,.6);line-height:1.6}
+
+@media (max-width:700px){
+  .wrap{padding:0 18px}
+  .paso,.pasos{padding:32px 24px}
+  .cuando{padding:26px 24px}
+  .btn{padding:18px 26px;font-size:.92rem;width:100%}
+  .item{grid-template-columns:38px 1fr;gap:14px;padding:18px 18px}
+  .item .num{width:38px;height:38px;font-size:1rem}
+}
+</style>
+</head>
+<body>
+
+<div class="wrap">
+  <div class="top">
+    <div class="check" aria-hidden="true">
+      <svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M20 6 9 17l-5-5"/>
+      </svg>
+    </div>
+    <p class="intro">Felicidades por escogerte. Estás a un solo paso de completar tu registro al webinar gratuito</p>
+    <h1>Más vida, menos pastillas</h1>
+  </div>
+
+  <div class="paso">
+    <h2>Únete al grupo de WhatsApp</h2>
+    <p>Ese será nuestro canal de comunicación. Ahí te enviaré el enlace de acceso al webinar y los recordatorios antes de que empecemos.</p>
+    <a class="btn" href="https://chat.whatsapp.com/I7e0FunKSMh9ZScwKYoaKo" target="_blank" rel="noopener">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2 22l5.25-1.38a9.87 9.87 0 0 0 4.79 1.22h.01c5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0 0 12.04 2m0 1.67c2.2 0 4.27.86 5.82 2.42a8.17 8.17 0 0 1 2.42 5.82c0 4.54-3.7 8.24-8.25 8.24a8.2 8.2 0 0 1-4.19-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.19 8.19 0 0 1-1.26-4.38c0-4.54 3.7-8.24 8.25-8.24m-3.2 4.4c-.15 0-.4.06-.61.28-.21.22-.8.79-.8 1.92s.82 2.23.94 2.38c.11.15 1.6 2.45 3.89 3.43.54.24.97.38 1.3.48.55.18 1.05.15 1.44.09.44-.06 1.35-.55 1.54-1.09.19-.53.19-.99.13-1.09-.06-.09-.21-.15-.44-.26-.23-.12-1.35-.67-1.56-.74-.21-.08-.36-.12-.51.11-.15.23-.58.74-.71.89-.13.15-.26.17-.49.06-.23-.12-.97-.36-1.85-1.14-.68-.61-1.14-1.36-1.28-1.59-.13-.23-.01-.35.1-.47.1-.1.23-.26.34-.4.12-.13.15-.23.23-.38.08-.15.04-.28-.02-.4-.06-.11-.51-1.24-.71-1.7-.19-.44-.38-.38-.51-.39z"/></svg>
+      Entrar al grupo de WhatsApp
+    </a>
+    <p class="recordatorio">Importante: sin este paso no recibirás el enlace del webinar.</p>
+  </div>
+
+  <div class="cuando">
+    <p class="etiqueta">Nos vemos en vivo</p>
+    <p class="dato">Miércoles 9 de septiembre · 7:00 PM hora de Houston (CT)</p>
+  </div>
+
+  <div class="pasos">
+    <h2>Tus próximos <i>pasos</i></h2>
+    <div class="lista">
+      <div class="item">
+        <div class="num" aria-hidden="true"></div>
+        <div>
+          <h3>Revisa tu correo electrónico</h3>
+          <p>Te enviamos un correo de confirmación con todos los detalles del webinar. Si no lo ves, revisa tu carpeta de spam o promociones.</p>
+        </div>
+      </div>
+      <div class="item">
+        <div class="num" aria-hidden="true"></div>
+        <div>
+          <h3>Agéndalo como una cita contigo misma</h3>
+          <p>Bloquea ese espacio en tu calendario y busca un lugar cómodo, sin interrupciones. Esta hora es solo para ti.</p>
+        </div>
+      </div>
+      <div class="item">
+        <div class="num" aria-hidden="true"></div>
+        <div>
+          <h3>Llega con mente abierta y tus preguntas</h3>
+          <p>No necesitas ser experta en salud ni saber de nutrición. Solo trae tus dudas, tu historia y las ganas de aprender algo nuevo.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<footer>
+  <div class="wrap">
+    <img src="assets/logo.png" alt="Renacer by Johanna">
+    <p class="redes">
+      <a href="https://www.instagram.com/renacerbyjohanna" target="_blank" rel="noopener">Instagram @renacerbyjohanna</a><br>
+      <a href="https://www.tiktok.com/@renacerbyjohanna" target="_blank" rel="noopener">TikTok @renacerbyjohanna</a>
+    </p>
+    <p class="legal">
+      Este webinar tiene fines educativos y no sustituye la consulta, el diagnóstico ni el tratamiento de tu médico.<br>
+      © <span id="anio"></span> Renacer by Johanna · Sitio desarrollado por Mercadeo MRR LLC
+    </p>
+  </div>
+</footer>
+
+<script>
+document.getElementById('anio').textContent = new Date().getFullYear();
+(function(){
+  var ultimo = 0;
+  function alto(){
+    /* Se mide el <body>, no documentElement: documentElement crece hasta la
+       altura del iframe y provocaria un bucle infinito de crecimiento. */
+    var h = Math.ceil(document.body.getBoundingClientRect().height);
+    if (h > 400 && Math.abs(h - ultimo) > 2){
+      ultimo = h;
+      try { parent.postMessage({ rbjAltura: h }, '*'); } catch(e){}
+    }
+  }
+  window.addEventListener('load', alto);
+  window.addEventListener('resize', alto);
+  setInterval(alto, 800);
+})();
+</script>
+</body>
+</html>
