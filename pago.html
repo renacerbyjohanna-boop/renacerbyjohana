@@ -10,14 +10,14 @@
 <link href="https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400&family=Playfair+Display:ital,wght@1,700&display=swap" rel="stylesheet">
 <style>
 :root{
-  --lila:#F8F6FD; --morado:#463376; --morado-suave:#9B8BC4;
-  --verde:#609354; --verde-claro:#B4CFAD; --verde-medio:#7CAE71; --tinta:#2E2444;
+  --lila:#F7EDFA; --tarjeta:#FCF7FD; --borde:#F0E0F6; --morado:#7F2C95; --morado-suave:#CEAFD7;
+  --verde:#396003; --verde-claro:#D8EDB9; --verde-medio:#72C006; --tinta:#3B2340;
 }
 *{box-sizing:border-box;margin:0;padding:0}
 html{-webkit-text-size-adjust:100%}
 body{
   font-family:'Figtree',system-ui,-apple-system,sans-serif;
-  background:var(--lila);color:var(--tinta);
+  background:#FFFFFF;color:var(--tinta);
   line-height:1.55;font-size:17px;overflow-x:hidden;
 }
 img{max-width:100%;height:auto;display:block}
@@ -38,11 +38,11 @@ h1{
   letter-spacing:-.026em;color:var(--morado);margin-bottom:16px;
 }
 h1 i{font-family:'Playfair Display',Georgia,serif;font-style:italic;font-weight:700;display:block;color:var(--verde)}
-.hero p{max-width:52ch;margin:0 auto;color:#4A3E63}
+.hero p{max-width:52ch;margin:0 auto;color:#56405C}
 
 /* precio */
 .precio{
-  background:#fff;border-radius:32px;padding:48px 44px;text-align:center;
+  background:var(--tarjeta);border:1px solid var(--borde);border-radius:32px;padding:48px 44px;text-align:center;
   border:3px solid var(--verde-claro);
 }
 .precio .et{font-weight:800;color:var(--verde);font-size:.98rem;margin-bottom:8px}
@@ -51,8 +51,8 @@ h1 i{font-family:'Playfair Display',Georgia,serif;font-style:italic;font-weight:
   letter-spacing:-.04em;color:var(--morado);
 }
 .precio .cifra sup{font-size:.42em;vertical-align:super;margin-right:.06em;letter-spacing:0}
-.precio .moneda{font-weight:700;color:#7B7192;font-size:1rem;margin-top:6px}
-.precio .detalle{margin-top:16px;color:#4A3E63;max-width:42ch;margin-left:auto;margin-right:auto}
+.precio .moneda{font-weight:700;color:#85718C;font-size:1rem;margin-top:6px}
+.precio .detalle{margin-top:16px;color:#56405C;max-width:42ch;margin-left:auto;margin-right:auto}
 
 .botones{display:flex;flex-direction:column;gap:12px;margin-top:32px;max-width:420px;margin-left:auto;margin-right:auto}
 .btn{
@@ -63,12 +63,12 @@ h1 i{font-family:'Playfair Display',Georgia,serif;font-style:italic;font-weight:
 }
 .btn:active{transform:translateY(1px)}
 .btn-tarjeta{color:#fff;background:var(--morado)}
-.btn-tarjeta:hover{background:#372459}
+.btn-tarjeta:hover{background:#5B206B}
 .btn-tarjeta:focus-visible{outline:3px solid var(--verde);outline-offset:3px}
 .btn svg{width:22px;height:22px;flex:0 0 22px}
 .cuotas{
   margin-top:22px;padding:22px 24px;background:var(--lila);
-  border:2px solid #E3DDF2;border-radius:20px;
+  border:2px solid #EBD3F2;border-radius:20px;
   max-width:420px;margin-left:auto;margin-right:auto;
 }
 .cuotas .titulo{font-weight:800;color:var(--morado);font-size:1rem;margin-bottom:8px}
@@ -77,32 +77,32 @@ h1 i{font-family:'Playfair Display',Georgia,serif;font-style:italic;font-weight:
   flex-wrap:wrap;margin:14px 0 12px;
 }
 .cuotas .marca{
-  padding:7px 16px;background:#fff;border:1px solid #E3DDF2;border-radius:999px;
+  padding:7px 16px;background:#fff;border:1px solid #EBD3F2;border-radius:999px;
   font-weight:800;font-size:.9rem;color:var(--morado);letter-spacing:.01em;
 }
-.cuotas .letra{font-size:.82rem;color:#7B7192;line-height:1.5}
+.cuotas .letra{font-size:.82rem;color:#85718C;line-height:1.5}
 .seguro{
-  margin-top:18px;font-size:.85rem;color:#7B7192;
+  margin-top:18px;font-size:.85rem;color:#85718C;
   display:flex;align-items:center;justify-content:center;gap:8px;
 }
-.seguro svg{width:15px;height:15px;fill:#7B7192;flex:0 0 15px}
+.seguro svg{width:15px;height:15px;fill:#85718C;flex:0 0 15px}
 
 /* bono */
 .bono{
   background:var(--verde-claro);border-radius:24px;padding:28px 32px;
-  margin-top:26px;color:#26401F;
+  margin-top:26px;color:#2C4A02;
 }
 .bono h3{font-weight:900;font-size:1.08rem;margin-bottom:8px}
 .bono p{font-size:.99rem;margin:0}
 
 /* incluye */
-.caja{background:#fff;border-radius:32px;padding:44px 44px}
+.caja{background:var(--tarjeta);border:1px solid var(--borde);border-radius:32px;padding:44px 44px}
 .caja h2{
   font-weight:900;font-size:clamp(1.5rem,3.4vw,2.1rem);line-height:1.08;
   letter-spacing:-.02em;color:var(--morado);margin-bottom:22px;
 }
 .caja ul{list-style:none;display:flex;flex-direction:column;gap:14px}
-.caja li{position:relative;padding-left:32px;color:#4A3E63;line-height:1.45}
+.caja li{position:relative;padding-left:32px;color:#56405C;line-height:1.45}
 .caja li::before{
   content:"";position:absolute;left:0;top:.42em;width:15px;height:15px;
   border-radius:50%;background:var(--verde-medio);
@@ -113,32 +113,32 @@ h1 i{font-family:'Playfair Display',Georgia,serif;font-style:italic;font-weight:
 .fechas h2{font-weight:900;font-size:clamp(1.4rem,3.2vw,2rem);letter-spacing:-.02em;margin-bottom:22px}
 .dato{display:flex;justify-content:space-between;gap:20px;padding:14px 0;border-bottom:1px solid rgba(255,255,255,.18)}
 .dato:last-child{border-bottom:none}
-.dato .k{color:#C9BEE6;font-size:.98rem}
+.dato .k{color:#E3C6EC;font-size:.98rem}
 .dato .v{font-weight:800;text-align:right}
 
 /* pasos */
-.pasos{background:#fff;border-radius:32px;padding:44px 44px}
+.pasos{background:var(--tarjeta);border:1px solid var(--borde);border-radius:32px;padding:44px 44px}
 .pasos h2{font-weight:900;font-size:clamp(1.5rem,3.4vw,2.1rem);letter-spacing:-.02em;color:var(--morado);margin-bottom:24px}
 .lista{display:flex;flex-direction:column;gap:16px;counter-reset:n}
 .item{display:grid;grid-template-columns:42px 1fr;gap:16px;align-items:start;background:var(--lila);border-radius:20px;padding:20px 22px}
 .num{
   counter-increment:n;width:42px;height:42px;border-radius:50%;
-  background:var(--verde-claro);color:#2B4A26;display:flex;align-items:center;
+  background:var(--verde-claro);color:#2C4A02;display:flex;align-items:center;
   justify-content:center;font-weight:900;font-size:1.1rem;
 }
 .num::before{content:counter(n)}
 .item h3{font-weight:800;font-size:1.03rem;color:var(--morado);margin-bottom:4px}
-.item p{color:#4A3E63;font-size:.97rem;margin:0}
+.item p{color:#56405C;font-size:.97rem;margin:0}
 
 /* condiciones */
-.cond{background:#fff;border-radius:32px;padding:40px 44px}
+.cond{background:var(--tarjeta);border:1px solid var(--borde);border-radius:32px;padding:40px 44px}
 .cond h2{font-weight:900;font-size:1.35rem;letter-spacing:-.015em;color:var(--morado);margin-bottom:18px}
-.cond p{color:#4A3E63;font-size:.97rem;margin-bottom:13px}
+.cond p{color:#56405C;font-size:.97rem;margin-bottom:13px}
 .cond p:last-child{margin-bottom:0}
 
 /* ayuda */
 .ayuda{text-align:center}
-.ayuda p{color:#4A3E63;margin-bottom:18px}
+.ayuda p{color:#56405C;margin-bottom:18px}
 .wa{
   display:inline-flex;align-items:center;gap:11px;padding:17px 32px;
   font-size:.97rem;font-weight:800;letter-spacing:.07em;text-transform:uppercase;
@@ -148,9 +148,9 @@ h1 i{font-family:'Playfair Display',Georgia,serif;font-style:italic;font-weight:
 .wa svg{width:21px;height:21px;fill:currentColor;flex:0 0 21px}
 
 /* pie */
-.pie{background:linear-gradient(100deg,#EFEBF8 0%,var(--morado) 22%,#3A2A63 78%,#EFEBF8 100%);padding:48px 0 36px;text-align:center;color:#fff;margin-top:48px}
+.pie{background:linear-gradient(100deg,#FFFFFF 0%,var(--morado) 22%,#5B206B 78%,#FFFFFF 100%);padding:48px 0 36px;text-align:center;color:#fff;margin-top:48px}
 .pie img{width:70px;margin:0 auto 18px}
-.pie .redes{font-size:.96rem;line-height:1.7;color:#E4DCF4}
+.pie .redes{font-size:.96rem;line-height:1.7;color:#EED9F5}
 .pie .redes a{color:#fff;border-bottom:1px solid rgba(255,255,255,.35)}
 .pie .legal{margin-top:22px;font-size:.77rem;color:rgba(255,255,255,.62);line-height:1.65;max-width:66ch;margin-left:auto;margin-right:auto}
 
@@ -177,11 +177,11 @@ h1 i{font-family:'Playfair Display',Georgia,serif;font-style:italic;font-weight:
       <svg viewBox="0 0 200 200">
         <defs><path id="circ" d="M100,100 m-72,0 a72,72 0 1,1 144,0 a72,72 0 1,1 -144,0"/></defs>
         <g class="anillo">
-          <text font-family="Figtree, sans-serif" font-size="18.5" font-weight="800" fill="#463376" letter-spacing="4.6">
+          <text font-family="Figtree, sans-serif" font-size="18.5" font-weight="800" fill="#7F2C95" letter-spacing="4.6">
             <textPath href="#circ" startOffset="1%">MÉTODO RENACER</textPath>
           </text>
         </g>
-        <g fill="#609354" transform="translate(100,100)">
+        <g fill="#396003" transform="translate(100,100)">
           <g id="pet"><ellipse cx="0" cy="-26" rx="8.5" ry="20"/></g>
           <use href="#pet" transform="rotate(45)"/><use href="#pet" transform="rotate(90)"/>
           <use href="#pet" transform="rotate(135)"/><use href="#pet" transform="rotate(180)"/>
