@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex, nofollow">
+<title>¡Bienvenida a la Cohorte #1! — Más Vida, Menos Pastillas</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400&family=Playfair+Display:ital,wght@1,700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --lila:#F7EDFA; --tarjeta:#FCF7FD; --borde:#F0E0F6;
+  --morado:#7F2C95; --morado-suave:#CEAFD7;
+  --verde:#396003; --verde-claro:#D8EDB9; --verde-medio:#72C006; --tinta:#3B2340;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{-webkit-text-size-adjust:100%}
+body{
+  font-family:'Figtree',system-ui,-apple-system,sans-serif;
+  background:#FFFFFF;color:var(--tinta);
+  line-height:1.55;font-size:17px;overflow-x:hidden;
+}
+img{max-width:100%;height:auto;display:block}
+a{text-decoration:none}
+.w{max-width:840px;margin:0 auto;padding:0 24px}
+.s{padding:44px 0}
+
+/* hero */
+.hero{padding:56px 0 28px;text-align:center}
+.check{
+  width:84px;height:84px;margin:0 auto 26px;border-radius:50%;
+  background:var(--verde-medio);display:flex;align-items:center;justify-content:center;
+}
+.check svg{width:42px;height:42px}
+.eyebrow{font-weight:800;color:var(--verde);font-size:.98rem;margin-bottom:10px}
+h1{
+  font-weight:900;font-size:clamp(2.1rem,5.2vw,3.4rem);line-height:1.02;
+  letter-spacing:-.026em;color:var(--morado);margin-bottom:16px;
+}
+h1 i{font-family:'Playfair Display',Georgia,serif;font-style:italic;font-weight:700;display:block;color:var(--verde)}
+.hero p{max-width:52ch;margin:0 auto;color:#56405C}
+
+/* recuadro de aviso */
+.aviso{
+  background:var(--verde-claro);border-radius:24px;padding:28px 32px;
+  color:#2C4A02;text-align:center;
+}
+.aviso strong{display:block;font-size:1.08rem;margin-bottom:6px}
+.aviso p{font-size:.99rem;margin:0}
+
+/* pasos */
+.pasos{background:var(--tarjeta);border:1px solid var(--borde);border-radius:32px;padding:44px 44px}
+.pasos h2{
+  font-weight:900;font-size:clamp(1.5rem,3.4vw,2.1rem);letter-spacing:-.02em;
+  color:var(--morado);margin-bottom:24px;
+}
+.lista{display:flex;flex-direction:column;gap:16px;counter-reset:n}
+.item{display:grid;grid-template-columns:44px 1fr;gap:18px;align-items:start;background:#fff;border:1px solid var(--borde);border-radius:20px;padding:24px}
+.num{
+  counter-increment:n;width:44px;height:44px;border-radius:50%;
+  background:var(--verde-claro);color:#2C4A02;display:flex;align-items:center;
+  justify-content:center;font-weight:900;font-size:1.12rem;
+}
+.num::before{content:counter(n)}
+.item h3{font-weight:800;font-size:1.06rem;color:var(--morado);margin-bottom:6px}
+.item p{color:#56405C;font-size:.98rem;margin:0 0 14px}
+.item p:last-child{margin-bottom:0}
+
+.btn{
+  display:inline-flex;align-items:center;justify-content:center;gap:10px;
+  padding:15px 28px;font-size:.94rem;font-weight:800;letter-spacing:.08em;
+  text-transform:uppercase;border-radius:999px;
+  transition:background .18s ease,border-color .18s ease;
+}
+.btn-morado{color:#fff;background:var(--morado)}
+.btn-morado:hover{background:#5B206B}
+.btn-morado:focus-visible{outline:3px solid var(--verde-medio);outline-offset:3px}
+.btn-wa{color:#fff;background:#25A55B}
+.btn-wa:hover{background:#1E8A4B}
+.btn-wa:focus-visible{outline:3px solid var(--morado);outline-offset:3px}
+.btn svg{width:20px;height:20px;fill:currentColor;flex:0 0 20px}
+
+/* fechas */
+.fechas{background:var(--morado);border-radius:32px;padding:38px 44px;color:#fff}
+.fechas h2{font-weight:900;font-size:clamp(1.4rem,3.2vw,2rem);letter-spacing:-.02em;margin-bottom:20px}
+.dato{display:flex;justify-content:space-between;gap:20px;padding:13px 0;border-bottom:1px solid rgba(255,255,255,.18)}
+.dato:last-child{border-bottom:none}
+.dato .k{color:#E3C6EC;font-size:.97rem}
+.dato .v{font-weight:800;text-align:right}
+
+/* preparate */
+.prep{background:var(--tarjeta);border:1px solid var(--borde);border-radius:32px;padding:40px 44px}
+.prep h2{font-weight:900;font-size:clamp(1.4rem,3.2vw,1.9rem);letter-spacing:-.02em;color:var(--morado);margin-bottom:18px}
+.prep ul{list-style:none;display:flex;flex-direction:column;gap:13px}
+.prep li{position:relative;padding-left:32px;color:#56405C;line-height:1.45}
+.prep li::before{content:"";position:absolute;left:0;top:.42em;width:15px;height:15px;border-radius:50%;background:var(--verde-medio)}
+
+/* ayuda */
+.ayuda{text-align:center}
+.ayuda p{color:#56405C;margin-bottom:18px}
+
+/* pie */
+.pie{background:linear-gradient(100deg,#FFFFFF 0%,var(--morado) 22%,#5B206B 78%,#FFFFFF 100%);padding:48px 0 36px;text-align:center;color:#fff;margin-top:44px}
+.pie img{width:70px;margin:0 auto 18px}
+.pie .redes{font-size:.96rem;line-height:1.7;color:#F3E2F8}
+.pie .redes a{color:#fff;border-bottom:1px solid rgba(255,255,255,.35)}
+.pie .legal{margin-top:22px;font-size:.77rem;color:rgba(255,255,255,.62);line-height:1.65;max-width:64ch;margin-left:auto;margin-right:auto}
+
+@media (max-width:700px){
+  .s{padding:30px 0}
+  .w{padding:0 18px}
+  .pasos,.fechas,.prep{padding:30px 22px}
+  .aviso{padding:24px 22px}
+  .item{grid-template-columns:36px 1fr;gap:14px;padding:20px 18px}
+  .num{width:36px;height:36px;font-size:1rem}
+  .dato{flex-direction:column;gap:2px}
+  .dato .v{text-align:left}
+  .btn{width:100%;padding:16px 18px;font-size:.88rem}
+}
+@media (max-width:600px){body{font-size:16px}}
+</style>
+</head>
+<body>
+
+<div class="hero">
+  <div class="w">
+    <div class="check" aria-hidden="true">
+      <svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>
+    </div>
+    <p class="eyebrow">Pago confirmado · Cohorte #1</p>
+    <h1>Estás dentro <i>¡bienvenida!</i></h1>
+    <p>Tu lugar en Más Vida, Menos Pastillas está reservado. Aquí abajo está todo lo que tienes que hacer ahora.</p>
+  </div>
+</div>
+
+<div class="s">
+  <div class="w">
+    <div class="aviso">
+      <strong>Revisa tu correo</strong>
+      <p>Te acabamos de enviar el recibo y el correo de bienvenida con tus accesos. Si no lo ves en unos minutos, busca en spam o promociones.</p>
+    </div>
+  </div>
+</div>
+
+<div class="s">
+  <div class="w">
+    <div class="pasos">
+      <h2>Tus tres primeros pasos</h2>
+      <div class="lista">
+
+        <div class="item">
+          <div class="num" aria-hidden="true"></div>
+          <div>
+            <h3>Agenda tu mentoría 1:1 inicial</h3>
+            <p>Es una sesión privada conmigo antes de que arranque el programa. Ahí revisamos tu historia, tus exámenes y diseñamos tu punto de partida. Elige el día que mejor te quede.</p>
+            <!-- PEGAR: Calendly de la mentoría 1:1 inicial -->
+            <a class="btn btn-morado" href="PEGAR_CALENDLY_MENTORIA_INICIAL" target="_top">Agendar mi mentoría</a>
+          </div>
+        </div>
+
+        <div class="item">
+          <div class="num" aria-hidden="true"></div>
+          <div>
+            <h3>Entra al grupo de la Cohorte #1</h3>
+            <p>Es el grupo privado de las mujeres que empezamos juntas. Ahí van los avisos de las mentorías grupales, los recordatorios y el acompañamiento diario.</p>
+            <a class="btn btn-wa" href="https://chat.whatsapp.com/KtDMybFeNJREG9sFfr4oCz" target="_blank" rel="noopener">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2 22l5.25-1.38a9.87 9.87 0 0 0 4.79 1.22h.01c5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0 0 12.04 2m0 1.67c2.2 0 4.27.86 5.82 2.42a8.17 8.17 0 0 1 2.42 5.82c0 4.54-3.7 8.24-8.25 8.24a8.2 8.2 0 0 1-4.19-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.19 8.19 0 0 1-1.26-4.38c0-4.54 3.7-8.24 8.25-8.24m-3.2 4.4c-.15 0-.4.06-.61.28-.21.22-.8.79-.8 1.92s.82 2.23.94 2.38c.11.15 1.6 2.45 3.89 3.43.54.24.97.38 1.3.48.55.18 1.05.15 1.44.09.44-.06 1.35-.55 1.54-1.09.19-.53.19-.99.13-1.09-.06-.09-.21-.15-.44-.26-.23-.12-1.35-.67-1.56-.74-.21-.08-.36-.12-.51.11-.15.23-.58.74-.71.89-.13.15-.26.17-.49.06-.23-.12-.97-.36-1.85-1.14-.68-.61-1.14-1.36-1.28-1.59-.13-.23-.01-.35.1-.47.1-.1.23-.26.34-.4.12-.13.15-.23.23-.38.08-.15.04-.28-.02-.4-.06-.11-.51-1.24-.71-1.7-.19-.44-.38-.38-.51-.39z"/></svg>
+              Entrar al grupo
+            </a>
+          </div>
+        </div>
+
+        <div class="item">
+          <div class="num" aria-hidden="true"></div>
+          <div>
+            <h3>Reúne tus exámenes</h3>
+            <p>Para la mentoría inicial ten a mano tus análisis de sangre más recientes y la lista completa de los medicamentos y suplementos que tomas, con sus dosis. Si tus exámenes tienen más de seis meses, avísame en el grupo y vemos cuáles conviene repetir.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="s">
+  <div class="w">
+    <div class="fechas">
+      <h2>Fechas de tu cohorte</h2>
+      <div class="dato"><span class="k">Mentoría 1:1 inicial</span><span class="v">Antes del 21 de septiembre</span></div>
+      <div class="dato"><span class="k">Arranque de la Cohorte #1</span><span class="v">Semana del 21 de septiembre</span></div>
+      <div class="dato"><span class="k">Mentorías grupales</span><span class="v">Una por semana, en vivo</span></div>
+      <div class="dato"><span class="k">Cierre del programa</span><span class="v">Semana del 14 de diciembre</span></div>
+    </div>
+  </div>
+</div>
+
+<div class="s">
+  <div class="w">
+    <div class="prep">
+      <h2>Mientras tanto</h2>
+      <ul>
+        <li>No cambies nada de tu medicación. Todo ajuste lo decide tu médico, y en el programa trabajamos para que esa conversación con él llegue con respaldo.</li>
+        <li>No empieces ninguna dieta ni restricción por tu cuenta. Tu protocolo lo diseñamos juntas en la mentoría inicial, según tu caso.</li>
+        <li>Anota durante estos días cómo te sientes al despertar, tus niveles de energía y a qué hora aparecen los antojos. Esa información vale oro en nuestra primera sesión.</li>
+        <li>Guarda esta página en favoritos por si necesitas volver a los enlaces.</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<div class="s ayuda">
+  <div class="w">
+    <p>¿Algo no funcionó o tienes una duda? Escríbeme directamente.</p>
+    <a class="btn btn-wa" href="https://wa.me/13462193908" target="_blank" rel="noopener">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2 22l5.25-1.38a9.87 9.87 0 0 0 4.79 1.22h.01c5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0 0 12.04 2m0 1.67c2.2 0 4.27.86 5.82 2.42a8.17 8.17 0 0 1 2.42 5.82c0 4.54-3.7 8.24-8.25 8.24a8.2 8.2 0 0 1-4.19-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.19 8.19 0 0 1-1.26-4.38c0-4.54 3.7-8.24 8.25-8.24m-3.2 4.4c-.15 0-.4.06-.61.28-.21.22-.8.79-.8 1.92s.82 2.23.94 2.38c.11.15 1.6 2.45 3.89 3.43.54.24.97.38 1.3.48.55.18 1.05.15 1.44.09.44-.06 1.35-.55 1.54-1.09.19-.53.19-.99.13-1.09-.06-.09-.21-.15-.44-.26-.23-.12-1.35-.67-1.56-.74-.21-.08-.36-.12-.51.11-.15.23-.58.74-.71.89-.13.15-.26.17-.49.06-.23-.12-.97-.36-1.85-1.14-.68-.61-1.14-1.36-1.28-1.59-.13-.23-.01-.35.1-.47.1-.1.23-.26.34-.4.12-.13.15-.23.23-.38.08-.15.04-.28-.02-.4-.06-.11-.51-1.24-.71-1.7-.19-.44-.38-.38-.51-.39z"/></svg>
+      Escribir a Johanna
+    </a>
+  </div>
+</div>
+
+<div class="pie">
+  <div class="w">
+    <a href="https://www.renacerbyjohanna.com/index.html#ready" target="_blank" rel="noopener">
+      <img src="assets/logo.png" alt="Renacer by Johanna" width="180" height="167">
+    </a>
+    <p class="redes">
+      <a href="https://www.instagram.com/renacerbyjohanna" target="_blank" rel="noopener">Instagram @renacerbyjohanna</a><br>
+      <a href="https://www.tiktok.com/@renacerbyjohanna" target="_blank" rel="noopener">TikTok @renacerbyjohanna</a>
+    </p>
+    <p class="legal">
+      Más Vida, Menos Pastillas es un acompañamiento educativo en salud y nutrición. No sustituye la consulta, el diagnóstico ni el tratamiento de tu médico, y no suspende ni modifica ninguna medicación.<br><br>
+      © <span id="anio"></span> Renacer by Johanna · Sitio desarrollado por Mercadeo MRR LLC
+    </p>
+  </div>
+</div>
+
+<script>
+document.getElementById('anio').textContent = new Date().getFullYear();
+
+/* Altura para el iframe de Systeme */
+(function(){
+  var ultimo = 0;
+  function alto(){
+    var h = Math.ceil(document.body.getBoundingClientRect().height);
+    if (h > 400 && Math.abs(h - ultimo) > 2){
+      ultimo = h;
+      try { parent.postMessage({ rbjAltura: h }, '*'); } catch(e){}
+    }
+  }
+  window.addEventListener('load', alto);
+  window.addEventListener('resize', alto);
+  setInterval(alto, 800);
+})();
+</script>
+</body>
+</html>
