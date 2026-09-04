@@ -26,18 +26,18 @@ a{text-decoration:none}
 .s{padding:64px 0}
 
 /* sello */
-.sello{width:150px;height:150px}
+.sello{width:132px;height:132px;margin:0 auto}
 .sello svg{width:100%;height:100%;display:block}
 .sello .anillo{animation:girar 22s linear infinite;transform-origin:50% 50%}
 @keyframes girar{to{transform:rotate(360deg)}}
 @media (prefers-reduced-motion:reduce){.sello .anillo{animation:none}}
 
 /* hero */
-.hero{padding:48px 0 36px}
-.hero-g{display:grid;grid-template-columns:1fr 1fr;gap:24px;align-items:center}
+.hero{padding:52px 0 28px;text-align:center}
+.hero-g{max-width:840px}
 h1{
-  font-weight:900;font-size:clamp(2.5rem,6.4vw,4.5rem);line-height:.94;
-  letter-spacing:-.028em;color:var(--morado);text-transform:uppercase;margin:26px 0 16px;
+  font-weight:900;font-size:clamp(2.4rem,6vw,4.2rem);line-height:.94;
+  letter-spacing:-.028em;color:var(--morado);text-transform:uppercase;margin:24px 0 14px;
 }
 .fecha{font-weight:800;font-size:clamp(1rem,2.2vw,1.28rem);color:var(--verde)}
 
@@ -152,9 +152,7 @@ h1{
 @media (max-width:900px){
   .s{padding:44px 0}
   .w{padding:0 18px}
-  .hero-g,.reg-g,.dolores,.apr-g,.bio-g,.parati-g{grid-template-columns:1fr}
-  .hero-g{gap:8px}
-  .hero-foto{max-width:400px;margin:0 auto}
+  .reg-g,.dolores,.apr-g,.bio-g,.parati-g{grid-template-columns:1fr}
   .reg-t,.bio-t{padding:36px 26px}
   .video{padding:30px 20px}
   .reg-f{order:-1;height:230px;min-height:230px}
@@ -195,16 +193,13 @@ h1{
       <h1>Más vida<br>menos pastillas<br>en 90 días</h1>
       <p class="fecha">Miércoles 9 de septiembre · 7:00 PM hora de Houston (CT)</p>
     </div>
-    <div class="hero-foto">
-      <img src="assets/johanna-hero.jpg" alt="Johanna, médico integral y creadora del Método Renacer" width="605" height="455">
-    </div>
   </div>
 </div>
 
-<div class="s" style="padding-top:16px">
+<div class="s" style="padding-top:0">
   <div class="w">
     <div class="video">
-      <h2>Antes de registrarte, mírame un minuto</h2>
+      <h2>Mírame un minuto antes de registrarte</h2>
       <p>Johanna te cuenta en menos de dos minutos qué es Más Vida, Menos Pastillas y qué puedes esperar de este webinar.</p>
       <div class="marco">
         <iframe
@@ -292,7 +287,7 @@ h1{
           </div>
         </div>
         <div class="bio-f">
-          <img src="assets/johanna-tablet.jpg" alt="Johanna, creadora del Método Renacer" width="520" height="779" loading="lazy">
+          <img src="assets/johanna-tablet.png" alt="Johanna, creadora del Método Renacer" width="520" height="779" loading="lazy">
         </div>
       </div>
     </div>
